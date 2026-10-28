@@ -1,0 +1,200 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --primary-color: #0f172a;
+  --secondary-color: #1e293b;
+  --accent-gold: #c59b27;
+  --accent-gold-hover: #b0891d;
+  --accent-gold-light: #fef3c7;
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --card-hover-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Luxury button styling */
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 0.625rem 1.35rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--accent-gold-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 155, 39, 0.35);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--accent-gold);
+  border: 1.5px solid var(--accent-gold);
+  font-weight: 600;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+}
+
+.bg-navy {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-slate {
+  background-color: var(--secondary-color) !important;
+}
+
+.text-gold {
+  color: var(--accent-gold) !important;
+}
+
+/* Card customizations */
+.hotel-card {
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Hero Section */
+.hero-wrapper {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.82)),
+    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #ffffff;
+}
+
+.search-floater {
+  position: relative;
+  z-index: 10;
+  margin-top: -65px;
+}
+
+/* Room badges */
+.badge-available {
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+  padding: 0.35em 0.75em;
+  border-radius: 6px;
+}
+
+.badge-occupied {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-weight: 600;
+  padding: 0.35em 0.75em;
+  border-radius: 6px;
+}
+
+.badge-cleaning {
+  background-color: #fef3c7;
+  color: #92400e;
+  font-weight: 600;
+  padding: 0.35em 0.75em;
+  border-radius: 6px;
+}
+
+.badge-maintenance {
+  background-color: #fee2e2;
+  color: #991b1b;
+  font-weight: 600;
+  padding: 0.35em 0.75em;
+  border-radius: 6px;
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+  min-height: calc(100vh - 70px);
+  background-color: var(--primary-color);
+  color: #e2e8f0;
+}
+
+.admin-sidebar .nav-link {
+  color: #94a3b8;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.admin-sidebar .nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar .nav-link.active {
+  color: #ffffff;
+  background: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Printable Invoice */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invoice, #printable-invoice * {
+    visibility: visible;
+  }
+  #printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

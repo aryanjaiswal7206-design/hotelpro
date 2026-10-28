@@ -1,0 +1,25 @@
+{
+  "name": "hotelpro-fullstack",
+  "version": "1.0.0",
+  "description": "HotelPro - Enterprise Hotel Management System (MERN Stack)",
+  "scripts": {
+    "start": "node start-all.js",
+    "dev": "node start-all.js",
+    "seed": "cd backend && npm run seed",
+    "dev:backend": "cd backend && npm start",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "hotel-management",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express",
+    "bootstrap",
+    "jwt",
+    "hospitality"
+  ],
+  "author": "HotelPro Engineering",
+  "license": "ISC"
+}
