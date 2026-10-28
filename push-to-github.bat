@@ -4,10 +4,7 @@ echo ==========================================================
 echo Pushing HotelPro to https://github.com/aryanjaiswal7206-design/hotelpro
 echo ==========================================================
 
-REM Set git path
-set PATH=%PATH%;C:\Users\aryan\bin\git\cmd
-
-git push -u origin main
+"C:\Users\aryan\bin\git\cmd\git.exe" push -u origin main
 
 if %errorlevel% equ 0 (
     echo.
